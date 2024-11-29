@@ -1,0 +1,104 @@
+.contenedor{
+    margin: 30px 30px 30px 30px;
+    width: 1300px;
+    min-height: 560px;
+    background: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60));
+    border-radius: 30px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    color: #D16014;
+    font-size: 60px;
+}
+
+h2{
+    font-size: 30px;
+    color: #D16014;
+}
+
+.formulario{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form{
+    display: flex;
+    gap: 10px;
+}
+
+form input[type="text"]{
+    padding: 8px;
+    width: 250px;
+}
+
+form input[type="submit"]{
+    margin: auto;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(58, 219, 58);
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover{
+    transform: scale(1.07);
+}
+
+.listado-tareas{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 16px;
+}
+
+.tareas ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.tareas ul li{
+    color: white;
+    display: flex;
+    gap: 20px;
+    font-size: 23px;
+}
+
+.tareas ul li button{
+    border: none;
+    background-color: transparent;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+@media (max-width:800px){
+    .contenedor{
+        margin: 0px 30px 30px 30px;
+        width: 340px;
+        min-height: 660px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    form{
+        width: 300px;
+    }
+    .listado-tareas{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+    }
+}
