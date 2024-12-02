@@ -5,8 +5,8 @@ export default function App() {
 
   const [tareas, setTareas] = useState([])
   const [tareasCompletadas,setTareasCompletadas] = useState([])
-
   const [inputTarea, setInputTarea] = useState("")
+
 
   function handleInputTarea(event) {
     setInputTarea(event.target.value)
@@ -14,6 +14,7 @@ export default function App() {
 
   function handleForm(event) {
     event.preventDefault()
+    if (inputTarea.trim() === "") return
     const nuevaTarea = {
       id: Date.now(),
       texto: inputTarea
@@ -33,7 +34,7 @@ export default function App() {
   }
 
   return (
-    <div className="contenedor">
+    <div className="contenedor" data-aos="fade-up">
       <h1 className='titulo'>Listado de tareas</h1>
       <hr />
       <div className="formulario">
